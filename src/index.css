@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0a0f1e;
+  --color-surface: #111827;
+  --color-border: #1f2937;
+  --color-text: #e2e8f0;
+  --color-muted: #6b7280;
+  --color-accent: #3d7ed6;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', 'Inter', system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 13px;
+}
+
+.react-flow__node { font-size: 11px; }
+.react-flow__edge-path { stroke-width: 1.5; }
+.react-flow__background { background-color: var(--color-bg); }
