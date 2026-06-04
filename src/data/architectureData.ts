@@ -613,10 +613,16 @@ export const EDGES: ArchEdge[] = [
   { id: 'e_crewland_surface', source: 'crewed_lander', target: 'habitation', type: 'mobility', note: '人員の月面展開' },
   { id: 'e_cargoland_con', source: 'cargo_lander', target: 'construction', type: 'cargo', note: '資材・機器' },
   { id: 'e_cargoland_isru', source: 'cargo_lander', target: 'isru', type: 'cargo' },
+  { id: 'e_cargoland_rover', source: 'cargo_lander', target: 'exposed_rover', type: 'cargo', note: '貨物（着陸機→曝露ローバー）' },
   { id: 'e_exrover_cargo', source: 'exposed_rover', target: 'construction', type: 'cargo', note: '月面上の貨物輸送' },
   { id: 'e_prover_hab', source: 'pressurized_rover', target: 'habitation', type: 'mobility', bidirectional: true },
   { id: 'e_rail_isru', source: 'lunar_railway', target: 'isru', type: 'cargo', note: '拠点間貨物輸送' },
   { id: 'e_rail_con', source: 'lunar_railway', target: 'construction', type: 'cargo' },
+  { id: 'e_rail_prover', source: 'lunar_railway', target: 'pressurized_rover', type: 'cargo', note: '資材・機器（鉄道→与圧ローバー）' },
+
+  // ---- ISRUガス → 輸送（月面）への燃料供給 ----
+  { id: 'e_isru_gas_rover', source: 'isru', target: 'exposed_rover', type: 'gas', note: '酸素・水素（ローバー燃料）' },
+  { id: 'e_isru_gas_rail', source: 'isru', target: 'lunar_railway', type: 'gas', note: '酸素・水素（鉄道燃料）' },
 
   // ---- サンプル ----
   { id: 'e_sci_sample', source: 'other_science', target: 'sample_return', type: 'sample' },
