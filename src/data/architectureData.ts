@@ -430,7 +430,7 @@ export const NODES: ArchNode[] = [
   {
     id: 'exposed_rover', label: '曝露ローバーシステム',
     category: 'transport', subCategory: '輸送（月面）',
-    ownership: 'japan', competition: 'partial', timing: 'none',
+    ownership: 'japan', competition: 'partial', timing: 'earliest',
     functions: [
       { id: 'er_cargo', label: '月面上を貨物輸送する機能' },
       { id: 'er_crew_short', label: '人を短時間輸送する機能' },
@@ -443,7 +443,7 @@ export const NODES: ArchNode[] = [
   {
     id: 'pressurized_rover', label: '与圧ローバーシステム',
     category: 'transport', subCategory: '輸送（月面）',
-    ownership: 'japan', competition: 'partial', timing: 'none',
+    ownership: 'japan', competition: 'partial', timing: 'earliest',
     functions: [{ id: 'pr_crew_long', label: '人を長時間輸送する機能' }],
     marketSegment: 'transport_mobility', supports: ['science_manned', 'tourism'],
     japanAssets: ['有人与圧ローバ（宇宙服無しで搭乗可能・越夜等の耐環境・与圧・走行機構技術）'],
@@ -452,7 +452,7 @@ export const NODES: ArchNode[] = [
   {
     id: 'lunar_railway', label: '月面鉄道システム',
     category: 'transport', subCategory: '輸送（月面）',
-    ownership: 'overseas', competition: 'partial', timing: 'mid_long',
+    ownership: 'overseas', competition: 'partial', timing: 'earliest',
     functions: [{ id: 'rail_cargo', label: '月面上を貨物輸送する機能' }],
     marketSegment: 'transport_mobility', supports: ['propellant', 'tourism'],
     techStrategyKeys: ['transport'],
@@ -478,7 +478,7 @@ export const NODES: ArchNode[] = [
   // ---------- 建設 ----------
   {
     id: 'construction', label: '建設システム',
-    category: 'construction', ownership: 'japan', competition: 'competition', timing: 'none',
+    category: 'construction', ownership: 'japan', competition: 'competition', timing: 'early_infra',
     functions: [{ id: 'con_build', label: '建材を使って建設作業をする機能' }],
     marketSegment: 'construction_robotics', supports: ['science_manned', 'propellant', 'tourism'],
     japanAssets: ['宇宙無人建設技術（スターダストP）', 'JAXA宇宙建設革新プロジェクト'],
@@ -486,7 +486,7 @@ export const NODES: ArchNode[] = [
   },
   {
     id: 'material_processing', label: '建材加工システム',
-    category: 'construction', ownership: 'japan', competition: 'competition', timing: 'none',
+    category: 'construction', ownership: 'japan', competition: 'competition', timing: 'early_infra',
     functions: [{ id: 'mp_process', label: '建材を加工する機能' }],
     marketSegment: 'construction_robotics', supports: ['science_manned', 'propellant', 'tourism'],
     techStrategyKeys: ['construction', 'resource_isru'],
